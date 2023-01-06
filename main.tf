@@ -1,5 +1,5 @@
 /**
- * # Terraform Cloudwatch Log Groups
+ * # Terraform Cloudwatch Log Group
  *
  * Terraform module which creates an AWS Cloudwatch Log group.
  * The focus on this module lies within it's simplicity by providing default values
