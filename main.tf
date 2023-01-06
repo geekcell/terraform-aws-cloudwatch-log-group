@@ -22,7 +22,7 @@ resource "aws_cloudwatch_log_stream" "main" {
 }
 
 module "kms" {
-  source = "github.com/geekcell/terraform-aws-kms"
+  source = "github.com/geekcell/terraform-aws-kms?ref=v1.0.0"
 
   alias  = format("cloudwatch/%s", var.name)
   policy = data.aws_iam_policy_document.main.json
