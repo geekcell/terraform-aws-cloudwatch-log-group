@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-[![Geek Cell GmbH](https://raw.githubusercontent.com/geekcell/template-terraform-module/main/docs/assets/logo.svg)](https://www.geekcell.io/)
+[![Geek Cell GmbH](https://raw.githubusercontent.com/geekcell/.github/main/geekcell-github-banner.png)](https://www.geekcell.io/)
 
 ### Code Quality
 [![License](https://img.shields.io/github/license/geekcell/terraform-aws-cloudwatch-log-group)](https://github.com/geekcell/terraform-aws-cloudwatch-log-group/blob/master/LICENSE)
@@ -35,9 +35,8 @@
 
 # Terraform Cloudwatch Log Group
 
-Terraform module which creates an AWS Cloudwatch Log group.
-The focus on this module lies within it's simplicity by providing default values
-that should make sense for most use cases.
+Terraform module which creates an AWS Cloudwatch Log group. The focus on this module lies within it's simplicity by
+providing default values that should make sense for most use cases.
 
 ## Inputs
 
@@ -62,8 +61,8 @@ that should make sense for most use cases.
 
 ## Resources
 
-- resource.aws_cloudwatch_log_group.main (main.tf#8)
-- resource.aws_cloudwatch_log_stream.main (main.tf#18)
+- resource.aws_cloudwatch_log_group.main (main.tf#7)
+- resource.aws_cloudwatch_log_stream.main (main.tf#17)
 - data source.aws_caller_identity.current (data.tf#1)
 - data source.aws_iam_policy_document.main (data.tf#5)
 - data source.aws_region.current (data.tf#3)
