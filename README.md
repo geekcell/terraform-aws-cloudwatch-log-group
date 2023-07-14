@@ -51,6 +51,7 @@ providing default values that should make sense for most use cases.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_arn"></a> [arn](#output\_arn) | The cloudwatch log group ARN |
 | <a name="output_name"></a> [name](#output\_name) | The cloudwatch log group name |
 
 ## Providers
