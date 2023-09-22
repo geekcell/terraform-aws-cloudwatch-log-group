@@ -42,6 +42,9 @@ providing default values that should make sense for most use cases.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_enable_customer_managed_kms"></a> [enable\_customer\_managed\_kms](#input\_enable\_customer\_managed\_kms) | Whether to enable customer managed KMS encryption for the log group. | `bool` | `false` | no |
+| <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | The ARN of the KMS Key to use when encrypting log data. | `string` | `null` | no |
+| <a name="input_log_streams"></a> [log\_streams](#input\_log\_streams) | A list of log streams to create within the log group. | `list(string)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the log group. | `string` | n/a | yes |
 | <a name="input_retention_in_days"></a> [retention\_in\_days](#input\_retention\_in\_days) | Specifies the number of days you want to retain log events in the specified log group. | `number` | `30` | no |
 | <a name="input_skip_destroy"></a> [skip\_destroy](#input\_skip\_destroy) | Set to true if you do not wish the log group (and any logs it may contain) to be deleted at destroy time, and instead just remove the log group from the Terraform state. | `bool` | `false` | no |
@@ -52,6 +55,7 @@ providing default values that should make sense for most use cases.
 | Name | Description |
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | The cloudwatch log group ARN |
+| <a name="output_customer_managed_key_arn"></a> [customer\_managed\_key\_arn](#output\_customer\_managed\_key\_arn) | The ARN of the customer KMS key used to encrypt log data if enabled. |
 | <a name="output_name"></a> [name](#output\_name) | The cloudwatch log group name |
 
 ## Providers

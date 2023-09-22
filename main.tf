@@ -9,18 +9,21 @@ resource "aws_cloudwatch_log_group" "main" {
 
   retention_in_days = var.retention_in_days
   skip_destroy      = var.skip_destroy
-  kms_key_id        = module.kms.key_arn
+  kms_key_id        = var.enable_customer_managed_kms ? module.kms[0].key_arn : var.kms_key_id
 
   tags = var.tags
 }
 
 resource "aws_cloudwatch_log_stream" "main" {
-  name = var.name
+  for_each = toset(var.log_streams)
 
+  name           = each.value
   log_group_name = aws_cloudwatch_log_group.main.name
 }
 
 module "kms" {
+  count = var.enable_customer_managed_kms ? 1 : 0
+
   source  = "geekcell/kms/aws"
   version = ">= 1.0.0, < 2.0.0"
 
